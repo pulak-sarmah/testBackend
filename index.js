@@ -18,6 +18,13 @@ app.get("/login", (req, res) => {
   res.send("<h1>login</h2>");
 });
 
+app.get("/json", (req, res) => {
+  res.status(200).json({
+    name: "john",
+    age: 22,
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
